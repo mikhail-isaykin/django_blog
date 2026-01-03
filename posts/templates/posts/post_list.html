@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Все посты</h1>
+
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <h3>{{ post.content }}</h3>
+        <p>Автор: {{ post.author }}</p>
+        <p>Обновлено: {{ post.updated_at }}</p>
+    {% endfor %}
+
+{% endblock content %}
