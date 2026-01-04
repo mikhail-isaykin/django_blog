@@ -8,6 +8,8 @@
         <h3>{{ post.content }}</h3>
         <p>Автор: {{ post.author }}</p>
         <p>Обновлено: {{ post.updated_at }}</p>
+
+        <a href="{% url 'post_detail' post.pk %}">→Подробнее</a>
     {% endfor %}
 
 {% endblock content %}

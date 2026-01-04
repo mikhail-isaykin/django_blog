@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <article>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+        <small>
+            Автор: {{ post.author }} | 
+            Обновлено: {{ post.updated_at }}
+        </small>
+
+        <a href="{% url 'post_list' %}">←Назад к списку</a>
+    </article>
+{% endblock %}
