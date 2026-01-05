@@ -29,8 +29,8 @@ def post_create(request):
         )  # тогда проверь корректность введенных данных, за эталон возьми описание полей модели
         if form.is_valid():  # валидация ввденных пользователем данных
             post = form.save(commit=False)  # не сохраняем сразу
-            post.author = request.user      # добавляем автора
-            post.save()              # сохранение нового поста в базу данных
+            post.author = request.user  # добавляем автора
+            post.save()  # сохранение нового поста в базу данных
             return redirect(
                 "post_list"
             )  # отправь пользователя на url, который в urls.py имеет name='post_list'
