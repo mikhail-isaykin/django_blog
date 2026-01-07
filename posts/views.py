@@ -42,3 +42,6 @@ def post_create(request):
     else:  # опционально/если GET/блок всегда срабатывает первым
         form = PostForm()  # пустая форма
         return render(request, "posts/post_create.html", {"form": form})
+    
+    def post_delete(request):
+        pass
