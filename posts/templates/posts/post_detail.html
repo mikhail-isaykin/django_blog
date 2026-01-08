@@ -8,7 +8,10 @@
             Автор: {{ post.author }} | 
             Обновлено: {{ post.updated_at }}
         </small>
-
+    <form method='post' action='{% url "post_delete" pk=post.pk %}'>
+        {% csrf_token %}
+        <button type='submit'>Удалить</button>
+    </form>
         <a href="{% url 'post_list' %}">←Назад к списку</a>
     </article>
 {% endblock %}

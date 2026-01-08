@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from .forms import PostForm
+from django.http import HttpResponseNotAllowed
 
 
 def post_list(request):
@@ -42,6 +43,10 @@ def post_create(request):
     else:  # опционально/если GET/блок всегда срабатывает первым
         form = PostForm()  # пустая форма
         return render(request, "posts/post_create.html", {"form": form})
-    
-    def post_delete(request):
-        pass
+
+def post_delete(request, pk):
+    if request.method == 'POST':
+        post = get_object_or_404(Post, id=pk)
+        post.delete()
+        return redirect('post_list')
+    return HttpResponseNotAllowed(['POST'])
