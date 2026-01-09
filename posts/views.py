@@ -44,9 +44,10 @@ def post_create(request):
         form = PostForm()  # пустая форма
         return render(request, "posts/post_create.html", {"form": form})
 
+
 def post_delete(request, pk):
-    if request.method == 'POST':
+    if request.method == "POST":
         post = get_object_or_404(Post, id=pk)
         post.delete()
-        return redirect('post_list')
-    return HttpResponseNotAllowed(['POST'])
+        return redirect("post_list")
+    return HttpResponseNotAllowed(["POST"])
