@@ -7,71 +7,23 @@
     <title>BlogHub - Платформа для авторов</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
- <!DOCTYPE html>
 <body>
     <!-- Christmas Background -->
     <div class="christmas-background" id="christmasBackground"></div>
 
+    {% include "includes/header.html" %}
+
     <!-- Main Content -->
-    <div class="main-content">
-        <!-- Hero секция -->
-        <div class="hero-section">
-            <div class="container">
-                <h1>Добро пожаловать на BlogHub</h1>
-                <p>Платформа для обмена идеями и знаниями</p>
-            </div>
-        </div>
-
-        <!-- Посты -->
-        <div class="container container-custom mb-5">
-            <div class="row">
-                <!-- Пост 1 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="post-card">
-                        <div class="post-header">
-                            <h2 class="post-title">Введение в веб-разработку с Django</h2>
-                            <div class="post-meta">
-                                <span><i class="bi bi-calendar3"></i>15 января 2026</span>
-                                <span><i class="bi bi-person-circle"></i>Александр Иванов</span>
-                            </div>
-                        </div>
-                        <div class="post-body">
-                            <p class="post-description">
-                                Django — это мощный веб-фреймворк на Python, который позволяет быстро создавать надежные и масштабируемые веб-приложения. В этой статье мы рассмотрим основные концепции Django, включая модели, представления и шаблоны. Вы узнаете, как создать свой первый проект и настроить базу данных для хранения информации...
-                            </p>
-                            <a href="#" class="btn-read-more">
-                                Подробнее <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Пост 2 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="post-card">
-                        <div class="post-header">
-                            <h2 class="post-title">Как Bootstrap упрощает создание адаптивных сайтов</h2>
-                            <div class="post-meta">
-                                <span><i class="bi bi-calendar3"></i>12 января 2026</span>
-                                <span><i class="bi bi-person-circle"></i>Мария Петрова</span>
-                            </div>
-                        </div>
-                        <div class="post-body">
-                            <p class="post-description">
-                                Bootstrap стал незаменимым инструментом для фронтенд-разработчиков по всему миру. Благодаря готовой системе сеток, компонентам и утилитам, создание адаптивных и красивых интерфейсов стало проще, чем когда-либо. В этой статье разберем ключевые возможности Bootstrap 5 и покажем примеры использования его компонентов...
-                            </p>
-                            <a href="#" class="btn-read-more">
-                                Подробнее <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class='main-content'>
+        {% block content %}
+        {% endblock %}
     </div>
 
+    {% include "includes/footer.html" %}
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
