@@ -6,13 +6,13 @@ from django.contrib.auth.models import User
 
 
 def register(request):
-    if request.user.is_authenticated:  # если пользователь уже зарегистрирован
+    if request.user.is_authenticated:
         return redirect("home")
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("home")
-    else:  # опционально/если GET/блок всегда срабатывает первым
-        form = RegisterForm()  # пустая форма
+    else:
+        form = RegisterForm()
         return render(request, "accounts/register.html", {"form": form})
