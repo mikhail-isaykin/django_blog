@@ -15,19 +15,13 @@ def post_detail(request, pk):
 
 
 def post_create(request):
-    if (
-        request.method == "POST"
-    ):
-        form = PostForm(
-            request.POST
-        )
+    if request.method == "POST":
+        form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect(
-                "post_list"
-            )
+            return redirect("post_list")
         else:
             error = "Форма заполнена неверно"
             return render(
