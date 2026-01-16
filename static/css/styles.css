@@ -59,27 +59,26 @@ body {
 }
 
 .btn-login:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: white;
-    color: white;
+    background: white;
+    color: #667eea;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
 .btn-register {
-    background: rgba(255, 255, 255, 0.3);
     color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-register:hover {
     background: white;
     color: #667eea;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
 .hero-section {
@@ -355,6 +354,7 @@ footer {
         font-size: 1.5rem;
     }
 }
+
 /* Breadcrumb Navigation */
 .breadcrumb-nav {
     margin-top: 2rem;
@@ -386,7 +386,7 @@ footer {
     color: white;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -479,7 +479,8 @@ footer {
     margin-bottom: 1rem;
 }
 
-.post-content-detail ul, .post-content-detail ol {
+.post-content-detail ul,
+.post-content-detail ol {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
@@ -592,20 +593,21 @@ footer {
     .post-title-detail {
         font-size: 1.8rem;
     }
-    
+
     .post-header-detail {
         padding: 2rem 1.5rem;
     }
-    
+
     .post-content-detail {
         padding: 2rem 1.5rem;
     }
-    
+
     .post-meta-detail {
         gap: 1rem;
         font-size: 0.9rem;
     }
 }
+
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ СОЗДАНИЯ ПОСТА ===== */
 /* Добавь это в конец твоего style.css */
 
@@ -865,22 +867,22 @@ textarea.error:focus {
     .create-post-card {
         padding: 2rem 1.5rem;
     }
-    
+
     .create-post-title {
         font-size: 1.8rem;
     }
-    
+
     .form-actions {
         flex-direction: column;
     }
-    
+
     .btn-submit,
     .btn-cancel,
     .btn-draft {
         width: 100%;
         justify-content: center;
     }
-    
+
     .tips-card {
         padding: 1.5rem;
     }
