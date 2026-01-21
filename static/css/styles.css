@@ -21,15 +21,12 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
     color: white;
-    text-rendering: optimizeLegibility;
+   text-rendering: optimizeLegibility;
 }
 
 .navbar-brand:hover {
     color: white !important;
-}
-
-.navbar-brand:active {
-    color: white !important;
+    transform: translateZ(0) scale(1.05);
 }
 
 .nav-link {
@@ -224,7 +221,7 @@ footer {
 
 .footer-title {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     color: white;
 }
@@ -242,6 +239,7 @@ footer {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 1.15rem;
 }
 
 .footer-links a:hover {
@@ -950,7 +948,6 @@ textarea.error:focus {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1216,17 +1213,17 @@ input[type="email"]:focus {
         padding: 2rem 1.5rem;
         border-radius: 20px;
     }
-
+    
     .auth-title {
         font-size: 1.6rem;
     }
-
+    
     .auth-icon {
         width: 70px;
         height: 70px;
         font-size: 2rem;
     }
-
+    
     .form-options {
         flex-direction: column;
         align-items: flex-start;
